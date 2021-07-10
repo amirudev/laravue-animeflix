@@ -6,11 +6,11 @@
   <!-- <div class="bg-black md:flex text-gray-300">
     <left-navbar/>
     <div class="flex-grow p-5"> -->
-      <card-b :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi No Nawa'" :genres="'Fantasy, Comedy, Scenery'" :linkto="'Under Development'"/>
+      <card-b :img="this.data.listRecommendations[0].img" :title="this.data.listRecommendations[0].title" :season="this.data.listRecommendations[0].season" :linkto="'Under Development'"/>
       <div class="text-gray-400 my-5">
-        <button class="font-bold mr-4" :class="{'text-gray-200': this.currentHighlight == 0}" @click="changeCurrentHighlight(0)">On Going</button>
-        <button class="font-bold mr-4" :class="{'text-gray-200': this.currentHighlight == 1}" @click="changeCurrentHighlight(1)">Completed</button>
-        <button class="font-bold mr-4" :class="{'text-gray-200': this.currentHighlight == 2}" @click="changeCurrentHighlight(2)">Movies</button>
+        <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 0}" @click="changeAiringStatus(0)">On Going</button>
+        <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 1}" @click="changeAiringStatus(1)">Completed</button>
+        <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 2}" @click="changeAiringStatus(2)">Movies</button>
       </div>
       <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <card-c :img="movie.img" :title="movie.title" :season="movie.season" :key="movie.id" v-for="movie in getLastWatched"/>
@@ -19,36 +19,19 @@
         <span class="font-bold text-xl">For You</span>
       </div>
       <div class="w-full grid grid-cols-2 lg:grid-cols-4">
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
+        <card-c :img="movie.img" :title="movie.title" :season="movie.season" :key="movie.id" v-for="movie in getRecommendations"/>
       </div>
       <div class="my-4">
         <span class="font-bold text-xl">Recently watched in Bogor</span>
       </div>
       <div class="w-full grid grid-cols-2 lg:grid-cols-4">
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
+        <card-c :img="movie.img" :title="movie.title" :season="movie.season" :key="movie.id" v-for="movie in getRecentlyWatchedByRegion"/>
       </div>
       <div class="my-4">
         <span class="font-bold text-xl">Joy our new Anime everyday</span>
       </div>
       <div class="w-full grid grid-cols-2 lg:grid-cols-4">
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
-        <card-c :img="'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png'" :title="'Kimi no Nawa'" :season="'Spring 2021'"/>
+        <card-c :img="movie.img" :title="movie.title" :season="movie.season" :key="movie.id" v-for="movie in getRecentlyAdded"/>
       </div>
     <!-- </div>
     <right-navbar/>
@@ -62,65 +45,9 @@ export default {
   name: 'app',
   data: () => ({
     isNavbarToggled: false,
-    currentHighlight: '1',
-    listLastWatched: [
-      {
-        id: '1',
-        img: 'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png',
-        title: 'Kimi no Nawa',
-        season: 'Spring 2018',
-        type: '1'
-      },
-      {
-        id: '2',
-        img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
-        title: 'Hello World',
-        season: 'Summer 2019',
-        type: '1'
-      },
-      {
-        id: '2',
-        img: 'https://upload.wikimedia.org/wikipedia/id/6/66/Weathering_with_You_Poster.jpg',
-        title: 'Tenki no Ko',
-        season: 'Summer 2019',
-        type: '1'
-      },
-      {
-        id: '2',
-        img: 'https://upload.wikimedia.org/wikipedia/id/8/86/Kaguya-sama_-_Love_is_War%2C_volume_1.jpg',
-        title: 'Kaguya-sama, Love is war',
-        season: 'Summer 2019',
-        type: '1'
-      }
-    ],
-    listRecommendations: [
-      {
-        id: '',
-        img: '',
-        title: '',
-        season: '',
-        type: ''
-      }
-    ],
-    listRecentlyWatchedRegion: [
-      {
-        id: '',
-        img: '',
-        title: '',
-        season: '',
-        type: ''
-      }
-    ],
-    listRecentlyAdded: [
-      {
-        id: '',
-        img: '',
-        title: '',
-        season: '',
-        type: ''
-      }
-    ],
+    airingStatus: '1'
   }),
+  props: ['data'],
   components: {
     CardB,
     CardC
@@ -129,16 +56,31 @@ export default {
       toggleNavbar(){
           this.isNavbarToggled = !this.isNavbarToggled
       },
-      changeCurrentHighlight(highlight){
-        this.currentHighlight = highlight
+      changeAiringStatus(status){
+        this.airingStatus = status
       }
   },
   computed: {
     getLastWatched(){
-      return this.listLastWatched.filter(movie => {
-        return movie.type == this.currentHighlight
+      return this.data.listLastWatched.filter(movie => {
+        return movie.airingStatus == this.airingStatus
       })
-    }
+    },
+    getRecommendations(){
+      return this.data.listRecommendations.filter(movie => {
+        return movie.airingStatus == this.airingStatus
+      })
+    },
+    getRecentlyWatchedByRegion(){
+      return this.data.listRecentlyWatchedByRegion.filter(movie => {
+        return movie.airingStatus == this.airingStatus
+      })
+    },
+    getRecentlyAdded(){
+      return this.data.listMovies.filter(movie => {
+        return movie.airingStatus == this.airingStatus
+      })
+    },
   }
 }
 </script>

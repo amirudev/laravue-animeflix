@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <img :src="this.img" alt="Anime 1" class="h-36 w-full object-cover object-top rounded-lg">
+        <img :src="this.img" :alt="this.title" class="h-36 w-full object-cover object-top rounded-lg">
         <div class="absolute bottom-0 text-gray-200 rounded-lg w-full bg-gradient-to-t from-black">
         <br>
         <br>
