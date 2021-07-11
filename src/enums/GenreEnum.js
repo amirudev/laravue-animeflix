@@ -36,4 +36,44 @@ const GenreEnum = Object.freeze({
     VAM: 'Vampire'
 })
 
-export default GenreEnum
+// Split / Convert this
+
+// GenreList = [
+//     'ACT',
+//     'ADV',
+//     'CAR',
+//     'COM',
+//     'DEM',
+//     'DEO',
+//     'DRA',
+//     'HAR',
+//     'HIS',
+//     'HOR',
+//     'JOS',
+//     'KID',
+//     'MAG',
+//     'MAA',
+//     'MEC',
+//     'MIL',
+//     'MUS',
+//     'MYS',
+//     'PAR',
+//     'POL',
+//     'PSY',
+//     'ROM',
+//     'SAM',
+//     'SCH',
+//     'SCI',
+//     'SEI',
+//     'SHJ',
+//     'SHN',
+//     'SOL',
+//     'SPC',
+//     'SPO',
+//     'SPN',
+//     'SPP',
+//     'THR',
+//     'VAM',
+// ]
+
+export default GenreEnum 

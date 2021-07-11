@@ -45,7 +45,7 @@ export default {
   name: 'app',
   data: () => ({
     isNavbarToggled: false,
-    airingStatus: '1'
+    airingStatus: 1
   }),
   props: ['data'],
   components: {

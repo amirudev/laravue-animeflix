@@ -1,5 +1,5 @@
 <template>
-    <card-b :img="this.data.listRecommendations[0].img" :title="this.data.listRecommendations[0].title" :season="this.data.listRecommendations[0].season" :linkto="'Under Development'"/>
+    <!-- <card-b :img="this.data.listRecommendations[0].img" :title="this.data.listRecommendations[0].title" :season="this.data.listRecommendations[0].season" :linkto="'Under Development'"/> -->
     <div class="text-gray-400 my-5">
         <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 0}" @click="changeAiringStatus(0)">On Going</button>
         <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 1}" @click="changeAiringStatus(1)">Completed</button>
@@ -7,7 +7,7 @@
     </div>
     <div class="text-gray-400 my-5">
         <button class="font-bold mr-4 mb-3" :class="{'text-gray-200': this.currentGenre == ''}" @click="changeCurrentGenre('')">All</button>
-        <button class="font-bold mr-4 mb-3" :class="{'text-gray-200': this.currentGenre == genre}" @click="changeCurrentGenre(genre)" v-for="genre in this.dataGenresList" :key="genre">{{ this.genreEnum[genre] }}</button>
+        <button class="font-bold mr-4 mb-3" :class="{'text-gray-200': this.currentGenre == genre}" @click="changeCurrentGenre(genre)" v-for="genre in Object.keys(this.genreEnum)" :key="genre">{{ this.genreEnum[genre] }}</button>
     </div>
     <div class="my-4">
         <div class="my-4">
@@ -25,7 +25,7 @@
     </div>
 </template>
 <script>
-import CardB from "../components/cards/Card-B.vue"
+// import CardB from "../components/cards/Card-B.vue"
 import CardC from "../components/cards/Card-C.vue"
 import GenreEnum from "../enums/GenreEnum.js"
 
@@ -33,12 +33,12 @@ export default {
     name: 'season',
     data: () => ({
         currentGenre: '',
-        airingStatus: '1',
+        airingStatus: 1,
         genreEnum: GenreEnum
     }),
-    props: ['data', 'dataGenresList'],
+    props: ['dataMovieList', 'dataGenresList'],
     components: {
-        CardB,
+        // CardB,
         CardC,
     },
     methods: {
@@ -51,8 +51,10 @@ export default {
     },
     computed: {
         getRecommendations(){
-            return this.data.listRecommendations.filter(movie => {
-                return movie.airingStatus == '1' && movie.genres.includes(this.currentGenre) && movie.airingStatus == this.airingStatus
+            return this.dataMovieList.filter(movie => {
+                if(movie.listType.includes('RC')){
+                    return movie.airingStatus == '1' && movie.genres.includes(this.currentGenre) && movie.airingStatus == this.airingStatus
+                }
             })
         }
     }
