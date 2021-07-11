@@ -5,7 +5,7 @@
   </div> -->
   <div class="bg-black md:flex text-gray-300">
     <left-navbar/>
-    <div class="flex-grow p-5">
+    <div class="flex-grow pt-16 p-5 md:pt-5">
       <router-view :dataMovieList="movieDataList" :dataGenresList="genresList"/>
     </div>
     <right-navbar :movie="movieDataList" :events="eventDataList"/>

@@ -1,5 +1,5 @@
 <template>
-    <!-- <card-b :img="this.data.listRecommendations[0].img" :title="this.data.listRecommendations[0].title" :season="this.data.listRecommendations[0].season" :linkto="'Under Development'"/> -->
+    <card-b :img="getRecommendations[0].img" :title="getRecommendations[0].title" :season="getRecommendations[0].season" :linkto="'Under Development'" v-if="getRecommendations.length >= 1"/>
     <div class="text-gray-400 my-5">
         <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 0}" @click="changeAiringStatus(0)">On Going</button>
         <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 1}" @click="changeAiringStatus(1)">Completed</button>
@@ -25,7 +25,7 @@
     </div>
 </template>
 <script>
-// import CardB from "../components/cards/Card-B.vue"
+import CardB from "../components/cards/Card-B.vue"
 import CardC from "../components/cards/Card-C.vue"
 import GenreEnum from "../enums/GenreEnum.js"
 
@@ -38,7 +38,7 @@ export default {
     }),
     props: ['dataMovieList', 'dataGenresList'],
     components: {
-        // CardB,
+        CardB,
         CardC,
     },
     methods: {
