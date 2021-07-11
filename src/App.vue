@@ -23,6 +23,7 @@ export default {
         img: 'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png',
         title: 'Kimi no Nawa',
         season: 'Spring 2018',
+        author: 'Takumi Kitamura',
         genres: ['', 'ACT'],
         airingStatus: 1,
         listType: ['LW', 'RC', 'RW']
@@ -32,6 +33,7 @@ export default {
         img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
         title: 'Hello World',
         season: 'Summer 2019',
+        author: 'Takumi Kitamura',
         genres: ['', 'ADV'],
         airingStatus: 2,
         listType: ['LW', 'RC']

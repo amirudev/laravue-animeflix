@@ -30,7 +30,7 @@
               </svg>
               <span class="mx-3">Discovery</span>
             </navbar-list-item>
-            <navbar-list-item :linkto="'Under Development'">
+            <navbar-list-item :linkto="'favourite'">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
@@ -39,7 +39,7 @@
           </div>
           <div class="mt-4">
             <h1 class="text-gray-300 font-bold py-4">SOCIAL</h1>
-            <navbar-list-item :linkto="'Under Development'">
+            <navbar-list-item :linkto="'friends'">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>

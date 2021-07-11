@@ -1,12 +1,13 @@
 <template>
-    <div class="relative">
-        <img :src="this.img" :alt="this.title" class="h-36 w-full object-cover object-top rounded-lg">
-        <div class="absolute bottom-0 text-gray-200 rounded-lg w-full bg-gradient-to-t from-black">
-        <br>
-        <br>
-        <div class="flex mx-3">
-            <h3 class="font-bold mb-2 flex-grow"><slot/></h3>
-            <span class="text-xs flex-none w-4">
+    <div class="w-full m-1 mx-auto">
+        <div class="relative m-1">
+        <img :src="this.img" :alt="this.title" class="max-w-full w-full object-cover object-top rounded-lg h-28">
+        <div class="absolute bottom-0 left-0 p-3 w-full bg-gradient-to-r from-black flex justify-between">
+            <div>
+                <p class="font-bold text-gray-100 text-md">{{ this.title }}</p>
+                <p>{{ this.season }}</p>
+            </div>
+            <span class="text-xs flex-none w-4 my-auto mx-3">
                 <svg v-if="!this.isLiked" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
@@ -20,7 +21,7 @@
 </template>
 <script>
 export default {
-    name: 'card-a',
-    props: ['img', 'isLiked']
+    name: 'card-e',
+    props: ['img', 'title', 'season', 'isLiked']
 }
 </script>
