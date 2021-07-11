@@ -53,7 +53,7 @@ export default {
         getRecommendations(){
             return this.dataMovieList.filter(movie => {
                 if(movie.listType.includes('RC')){
-                    return movie.airingStatus == '1' && movie.genres.includes(this.currentGenre) && movie.airingStatus == this.airingStatus
+                    return movie.genres.includes(this.currentGenre) && movie.airingStatus == this.airingStatus
                 }
             })
         }

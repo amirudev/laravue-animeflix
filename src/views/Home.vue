@@ -6,7 +6,7 @@
   <!-- <div class="bg-black md:flex text-gray-300">
     <left-navbar/>
     <div class="flex-grow p-5"> -->
-      <card-b :img="this.data.listRecommendations[0].img" :title="this.data.listRecommendations[0].title" :season="this.data.listRecommendations[0].season" :linkto="'Under Development'"/>
+      <card-b :img="this.dataMovieList[0].img" :title="this.dataMovieList[0].title" :season="this.dataMovieList[0].season" :linkto="'Under Development'"/>
       <div class="text-gray-400 my-5">
         <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 0}" @click="changeAiringStatus(0)">On Going</button>
         <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 1}" @click="changeAiringStatus(1)">Completed</button>
@@ -45,9 +45,9 @@ export default {
   name: 'app',
   data: () => ({
     isNavbarToggled: false,
-    airingStatus: 1
+    airingStatus: 1,
   }),
-  props: ['data'],
+  props: ['dataMovieList'],
   components: {
     CardB,
     CardC
@@ -62,22 +62,32 @@ export default {
   },
   computed: {
     getLastWatched(){
-      return this.data.listLastWatched.filter(movie => {
-        return movie.airingStatus == this.airingStatus
+      // LW = Last Watched
+      return this.dataMovieList.filter(movie => {
+        if(movie.listType.includes('LW')){
+          return movie.airingStatus == this.airingStatus
+        }
       })
     },
     getRecommendations(){
-      return this.data.listRecommendations.filter(movie => {
-        return movie.airingStatus == this.airingStatus
+      // RC = Recommendations
+      return this.dataMovieList.filter(movie => {
+        if(movie.listType.includes('RC')){
+          return movie.airingStatus == this.airingStatus
+        }
       })
     },
     getRecentlyWatchedByRegion(){
-      return this.data.listRecentlyWatchedByRegion.filter(movie => {
-        return movie.airingStatus == this.airingStatus
+      // RW = Region Watched
+      return this.dataMovieList.filter(movie => {
+        if(movie.listType.includes('RW')){
+          return movie.airingStatus == this.airingStatus
+        }
       })
     },
     getRecentlyAdded(){
-      return this.data.listMovies.filter(movie => {
+      // No Conditional, All Movies
+      return this.dataMovieList.filter(movie => {
         return movie.airingStatus == this.airingStatus
       })
     },

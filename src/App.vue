@@ -25,7 +25,16 @@ export default {
         season: 'Spring 2018',
         genres: ['', 'ACT'],
         airingStatus: 1,
-        listType: ['AA', 'LW', 'RC', 'RW']
+        listType: ['LW', 'RC', 'RW']
+      },
+      {
+        id: '2',
+        img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
+        title: 'Hello World',
+        season: 'Summer 2019',
+        genres: ['', 'ADV'],
+        airingStatus: 2,
+        listType: ['LW', 'RC']
       },
       // listLastWatched: [
       //   {
