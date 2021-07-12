@@ -30,6 +30,28 @@ export default {
         views: 17000
       },
       {
+        id: '1',
+        img: 'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png',
+        title: 'Kimi no Nawa',
+        season: 'Spring 2018',
+        author: 'Takumi Kitamura',
+        genres: ['', 'SOL'],
+        airingStatus: 1,
+        listType: ['LW', 'RC', 'RW'],
+        views: 15000
+      },
+      {
+        id: '1',
+        img: 'https://upload.wikimedia.org/wikipedia/id/0/0b/Your_Name_poster.png',
+        title: 'Kimi no Nawa',
+        season: 'Spring 2018',
+        author: 'Takumi Kitamura',
+        genres: ['', 'ACT'],
+        airingStatus: 1,
+        listType: ['LW', 'RC', 'RW'],
+        views: 20000
+      },
+      {
         id: '2',
         img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
         title: 'Hello World H',
@@ -50,6 +72,28 @@ export default {
         airingStatus: 2,
         listType: ['LW', 'RC'],
         views: 15000
+      },
+      {
+        id: '2',
+        img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
+        title: 'Hello World H',
+        season: 'Summer 2019',
+        author: 'Takumi Kitamura',
+        genres: ['', 'ADV'],
+        airingStatus: 2,
+        listType: ['LW', 'RC'],
+        views: 40000
+      },
+      {
+        id: '2',
+        img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
+        title: 'Hello World H',
+        season: 'Summer 2019',
+        author: 'Takumi Kitamura',
+        genres: ['', 'ADV'],
+        airingStatus: 2,
+        listType: ['LW', 'RC'],
+        views: 30000
       },
       // listLastWatched: [
       //   {

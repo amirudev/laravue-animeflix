@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Season from '../views/Season.vue'
 import Discovery from '../views/Discovery.vue'
 import Ranking from '../views/Ranking.vue'
+import Admin from '../views/Admin.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/ranking',
     name: 'ranking',
     component: Ranking
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: Admin
   },
   {
     path: '/underdev',
