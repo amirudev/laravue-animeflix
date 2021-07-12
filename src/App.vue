@@ -26,17 +26,30 @@ export default {
         author: 'Takumi Kitamura',
         genres: ['', 'ACT'],
         airingStatus: 1,
-        listType: ['LW', 'RC', 'RW']
+        listType: ['LW', 'RC', 'RW'],
+        views: 17000
       },
       {
         id: '2',
         img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
-        title: 'Hello World',
+        title: 'Hello World H',
         season: 'Summer 2019',
         author: 'Takumi Kitamura',
         genres: ['', 'ADV'],
         airingStatus: 2,
-        listType: ['LW', 'RC']
+        listType: ['LW', 'RC'],
+        views: 20000
+      },
+      {
+        id: '2',
+        img: 'https://upload.wikimedia.org/wikipedia/id/a/a8/HELLOWORLD.jpg',
+        title: 'Hello World L',
+        season: 'Summer 2019',
+        author: 'Takumi Kitamura',
+        genres: ['', 'ADV'],
+        airingStatus: 2,
+        listType: ['LW', 'RC'],
+        views: 15000
       },
       // listLastWatched: [
       //   {

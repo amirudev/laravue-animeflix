@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Season from '../views/Season.vue'
 import Discovery from '../views/Discovery.vue'
-import Favourite from '../views/Favourite.vue'
-import Friends from '../views/Friends.vue'
+import Ranking from '../views/Ranking.vue'
 
 const routes = [
   {
@@ -22,14 +21,9 @@ const routes = [
     component: Discovery
   },
   {
-    path: '/favourite',
-    name: 'favourite',
-    component: Favourite
-  },
-  {
-    path: '/friends',
-    name: 'friends',
-    component: Friends
+    path: '/ranking',
+    name: 'ranking',
+    component: Ranking
   },
   {
     path: '/underdev',
