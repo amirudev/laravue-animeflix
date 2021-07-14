@@ -5,6 +5,9 @@ import Discovery from '../views/Discovery.vue'
 import Ranking from '../views/Ranking.vue'
 import Admin from '../views/Admin.vue'
 
+// Admin Child
+
+
 const routes = [
   {
     path: '/',
@@ -29,7 +32,25 @@ const routes = [
   {
     path: '/admin',
     name: 'admin',
-    component: Admin
+    component: Admin,
+    children: [
+      {
+        path: '',
+        component: import('../views/Admin/AdminManage.vue')
+      },
+      {
+        path: 'users',
+        component: import('../views/Admin/UsersManage.vue')
+      },
+      {
+        path: 'movies',
+        component: import('../views/Admin/MoviesManage.vue')
+      },
+      {
+        path: 'sitesettings',
+        component: import('../views/Admin/SiteSettings.vue')
+      }
+    ]
   },
   {
     path: '/underdev',

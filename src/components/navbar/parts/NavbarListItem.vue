@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{name: this.linkto}" class="text-gray-400 inline-flex align-middle py-2 w-full hover:text-gray-200" :class="{'text-gray-200': this.isActive}">
+    <router-link :to="{name: this.linkto}" class="inline-flex w-full align-middle py-2 hover:text-gray-200" :class="{'text-gray-200': this.isActive}">
         <slot></slot>
     </router-link>
 </template>

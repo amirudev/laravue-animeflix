@@ -7,20 +7,20 @@
 <div class="grid grid-cols-2">
     <div class="bg-gray-800 rounded p-3 m-1">
         <p class="font-bold text-xl">Most Watched Anime</p>
-        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getRankedMovie" :key="movie.id"/>
+        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getRankedMovie.slice(0, 10)" :key="movie.id"/>
     </div>
     <div>
       <div class="bg-gray-800 rounded p-3 m-1">
         <p class="font-bold text-xl">Action</p>
-        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getMovieByGenre('ACT')" :key="movie.id"/>
+        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getMovieByGenre('ACT').slice(0, 3)" :key="movie.id"/>
       </div>
       <div class="bg-gray-800 rounded p-3 m-1">
         <p class="font-bold text-xl">Slice Of Life</p>
-        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getMovieByGenre('SOL')" :key="movie.id"/>
+        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getMovieByGenre('SOL').slice(0, 3)" :key="movie.id"/>
       </div>
       <div class="bg-gray-800 rounded p-3 m-1">
         <p class="font-bold text-xl">Comedy</p>
-        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getMovieByGenre('COM')" :key="movie.id"/>
+        <card-f :index="index + 1" :title="movie.title" :views="movie.views" :img="movie.img" v-for="(movie, index) in getMovieByGenre('COM').slice(0, 3)" :key="movie.id"/>
       </div>
     </div>
 </div>
@@ -49,11 +49,6 @@ export default {
   },
   mounted(){
     this.moviesList = this.dataMovieList
-
-    // this.moviesList = this.moviesList.sort((a, b) => {
-    //   console.log(a.views)
-    //   return a.views + b.views
-    // })
   },
   computed: {
     getMoviesList(){
@@ -62,7 +57,7 @@ export default {
       })
     },
     getRankedMovie(){
-      return this.getMoviesList.sort((a, b) => {
+      return this.getMoviesList.slice().sort((a, b) => {
         return a.views - b.views
       }).reverse()
     },
