@@ -11,8 +11,6 @@
         <card-a :img="this.movie.img">{{ this.movie.title }}</card-a>
         <h1 class="text-gray-200 font-bold py-3">Next Events</h1>
         <event-card :date="16" :title="event.title" :detailsDate="event.datetime" :location="event.location" v-for="event in this.events" :key="event.id"/>
-        <!-- <event-card :date="16" :title="'Kimi no Nawa release'" :detailsDate="'16 Januari - 10.00'" :location="'Jakarta, Indonesia'"/>
-        <event-card :date="16" :title="'Kimi no Nawa release'" :detailsDate="'16 Januari - 10.00'" :location="'Jakarta, Indonesia'"/> -->
       </div>
     </div>
 </template>

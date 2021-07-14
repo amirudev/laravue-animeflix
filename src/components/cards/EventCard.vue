@@ -6,9 +6,9 @@
         </div>
         </div>
         <div class="flex-grow mx-2">
-        <p class="font-bold">{{ this.title }}</p>
-        <p>{{ this.detailsDate }}</p>
-        <p>{{ this.location }}</p>
+            <p class="font-bold">{{ this.title }}</p>
+            <p>{{ this.detailsDate }}</p>
+            <p>{{ this.location }}</p>
         </div>
     </div>
 </template>

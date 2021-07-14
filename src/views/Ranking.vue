@@ -1,4 +1,7 @@
 <template>
+<div class="my-5">
+    <h1 class="text-2xl font-bold">RANKING</h1>
+</div>
 <div class="text-gray-400 my-5">
   <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 0}" @click="changeAiringStatus(0)">On Going</button>
   <button class="font-bold mr-4" :class="{'text-gray-200': this.airingStatus == 1}" @click="changeAiringStatus(1)">Completed</button>

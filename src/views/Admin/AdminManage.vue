@@ -1,44 +1,50 @@
 <template>
-    <table class="table-auto w-full border border-gray-500 text-center my-4">
-        <thead class="bg-gray-800 border border-gray-500">
-            <tr>
-                <th class="py-3">Name</th>
-                <th class="py-3">Role</th>
-                <th class="py-3">Added By</th>
-                <th class="py-3">Added At</th>
-                <th class="py-3">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="hover:bg-gray-900">
-                <td class="p-3">Wahyu Amirulloh</td>
-                <td class="p-3">Admin</td>
-                <td class="p-3">John Doe</td>
-                <td class="p-3">2021/08/20 19:59</td>
-                <td class="">
-                    <a class="text-red-500 font-bold px-1" href="#">Delete</a>
-                </td>
-            </tr>
-            <tr class="hover:bg-gray-900">
-                <td class="p-3">Wahyu Amirulloh</td>
-                <td class="p-3">Admin</td>
-                <td class="p-3">John Doe</td>
-                <td class="p-3">2021/08/20 19:59</td>
-                <td class="">
-                    <a class="text-red-500 font-bold px-1" href="#">Delete</a>
-                </td>
-            </tr>
-            <tr class="hover:bg-gray-900">
-                <td class="p-3">Wahyu Amirulloh</td>
-                <td class="p-3">Admin</td>
-                <td class="p-3">John Doe</td>
-                <td class="p-3">2021/08/20 19:59</td>
-                <td class="">
-                    <a class="text-red-500 font-bold px-1" href="#">Delete</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="overflow-x-auto">
+        <table class="table-auto w-full border border-gray-500 text-center my-5">
+            <thead class="bg-gray-800 border border-gray-500">
+                <tr>
+                    <th class="py-3">Admin ID</th>
+                    <th class="py-3">Name</th>
+                    <th class="py-3">Role</th>
+                    <th class="py-3">Added By</th>
+                    <th class="py-3">Added At</th>
+                    <th class="py-3">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hover:bg-gray-900">
+                    <td class="p-3">1</td>
+                    <td class="p-3">Wahyu Amirulloh</td>
+                    <td class="p-3">Admin</td>
+                    <td class="p-3">John Doe</td>
+                    <td class="p-3">2021/08/20 19:59</td>
+                    <td class="">
+                        <a class="text-red-500 font-bold px-3" href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-900">
+                    <td class="p-3">1</td>
+                    <td class="p-3">Wahyu Amirulloh</td>
+                    <td class="p-3">Admin</td>
+                    <td class="p-3">John Doe</td>
+                    <td class="p-3">2021/08/20 19:59</td>
+                    <td class="">
+                        <a class="text-red-500 font-bold px-3" href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-900">
+                    <td class="p-3">1</td>
+                    <td class="p-3">Wahyu Amirulloh</td>
+                    <td class="p-3">Admin</td>
+                    <td class="p-3">John Doe</td>
+                    <td class="p-3">2021/08/20 19:59</td>
+                    <td class="">
+                        <a class="text-red-500 font-bold px-3" href="#">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="my-2">
         <h3 class="font-bold text-lg">Tambah Admin Baru</h3>
         <form action="">

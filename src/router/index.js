@@ -4,6 +4,7 @@ import Season from '../views/Season.vue'
 import Discovery from '../views/Discovery.vue'
 import Ranking from '../views/Ranking.vue'
 import Admin from '../views/Admin.vue'
+import Events from '../views/Events.vue'
 
 // Admin Child
 
@@ -47,10 +48,19 @@ const routes = [
         component: import('../views/Admin/MoviesManage.vue')
       },
       {
+        path: 'report',
+        component: import('../views/Admin/ReportManage.vue')
+      },
+      {
         path: 'sitesettings',
         component: import('../views/Admin/SiteSettings.vue')
       }
     ]
+  },
+  {
+    path: '/events',
+    name: 'events',
+    component: Events
   },
   {
     path: '/underdev',

@@ -4,13 +4,16 @@
             <span class="font-bold mx-2">Admin</span>
         </router-link>
         <router-link to="/admin/users" :class="{'text-gray-200': this.$route.path == '/admin/users'}">
-            <span class="font-bold mx-2">Users</span>
+            <span class="font-bold mx-2">Pengguna</span>
         </router-link>
         <router-link to="/admin/movies" :class="{'text-gray-200': this.$route.path == '/admin/movies'}">
-            <span class="font-bold mx-2">Movies</span>
+            <span class="font-bold mx-2">Film</span>
+        </router-link>
+        <router-link to="/admin/report" :class="{'text-gray-200': this.$route.path == '/admin/report'}">
+            <span class="font-bold mx-2">Pencatatan</span>
         </router-link>
         <router-link to="/admin/sitesettings" :class="{'text-gray-200': this.$route.path == '/admin/sitesettings'}">
-            <span class="font-bold mx-2">Site Settings</span>
+            <span class="font-bold mx-2">Pengaturan</span>
         </router-link>
     </div>
     <div class="m-2">
